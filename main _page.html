@@ -16,6 +16,19 @@
                 <h1></h1>
             </div>
             <div class="subbar"></div>
+            <button type="newtask" class="btn" style = "color: #30323D" onclick="openpopup()">New</button>
+            <div class="popup" id="popup">
+                <p>create event</p>
+            </div>
         </div>
+
+        <script>
+            let popup = document.getElementById("popup")
+
+            function openpopup(){
+                popup.classList.add("open-popup");
+            }
+        </script>
+
     </body>
 </html>
