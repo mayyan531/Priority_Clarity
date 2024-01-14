@@ -63,8 +63,16 @@ function addBox({todo: input, category: date}) {
 
     save();
 
-    let boxWidth = 500-calculateDays()*50; 
-    let boxHeight = 150; 
+    let boxWidth, boxHeight;
+
+    if(calculateDays()>=7){
+        boxWidth = 150; 
+        boxHeight = 150;
+    }
+    else{
+        boxWidth = 500-calculateDays()*50; 
+        boxHeight = 150;
+    } 
 
     box.style.width = boxWidth + 'px';
     box.style.height = boxHeight + 'px';
