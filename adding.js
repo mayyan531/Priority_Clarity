@@ -1,4 +1,4 @@
-let input = document.getElementById("new-todo");
+let input = document.getElementById("taskName");
 let dateInput = document.getElementById("deadline");
 const addButton = document.getElementById("add-button");
 let taskList = [];
