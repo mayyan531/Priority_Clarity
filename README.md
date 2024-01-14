@@ -1,3 +1,6 @@
-# to_do_list
+# Priority Clarity
 Priority Clarity Deltahacks 10 submission
-Open main_page.html to view 
+
+Download adding.js, main_page.html, and style.css
+From files, open main_page.html to view in browser
+
