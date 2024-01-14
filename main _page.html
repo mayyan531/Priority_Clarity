@@ -14,6 +14,8 @@
 
             <div class="grid">
 
+                <div class="boxcontainer" id="box-container"></div>
+
                 <div class="topbar">
                     <h1>To Do</h1>
                 </div>
@@ -22,7 +24,7 @@
                     <h2>Saturday, January 13, 2024</h2>
                 </div>
             
-                <button type="newtask" class="new" style="color: #30323D" onclick="openpopup()">New</button>
+                <button type="newtask" class="newbtn" style="color: #30323D" onclick="openpopup()">New</button>
             
                 <div class="popup" id="popup">
 
@@ -49,14 +51,15 @@
                     </div>
     
                     <div>
-                        <button type="addTask" class="addbtn" style="color: #30323D" onclick="calculateDifference(); closepopup(); getTaskName()">Add</button>
+                        <button type="addTask" class="addbtn" style="color: #30323D" id ="add-button" onclick="calculateDifference(); closePopup(); getTaskName()">Add</button>
                         <p id="date"></p>
                     </div>
 
                 </div>
+
             </div>
+
         </div>
-        
 
         <script>
             let createnew = document.getElementById("popup")
@@ -65,12 +68,9 @@
                 createnew.classList.add("open-popup");
             }
 
-            function closepopup(){
-                createnew.classList.remove("open-popup");
-            }
-
         </script>
 
+        <script src="adding.js"></script>
 
     </body>
 </html>

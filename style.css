@@ -21,6 +21,13 @@ body{
     background-repeat: repeat;
 }
 
+.boxcontainer{
+    width: 1341px;
+    height: 761px;
+    flex-shrink: 0;
+    margin: 206px 40px 8px 59px;
+}
+
 .rectangle{
     background-color: #D88C9A;
     height: 400px;
@@ -76,7 +83,7 @@ body{
     letter-spacing: 4px;
 }
 
-.new{
+.newbtn{
     position: fixed;
     padding: 5px 35px;
     background:#F9F2EB;
@@ -92,13 +99,17 @@ body{
 }    
 
 .popup{
-    width: 300px;
-    height:400px;
-    background: #F2D0A9;
-    position: absolute;
-    top: 60%;
+    position: fixed;
+    width: 480px;
+    height: 500px;
+    border-radius: 10px;
+    border: 3px solid #494949;
+    background: #F9F2EB;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.50);
+    top: 55%;
     left: 50%;
     transform: translate(-50%,-50%);
+    position: absolute;
     display: none;
 
 }
@@ -211,4 +222,31 @@ body{
 
 .open-popup{
     display:block;
+}
+
+.box {
+    width: 300px;
+    height: 721px;
+    flex-shrink: 0;
+    margin: 20px 1032px 20px 9px;
+    border-radius: 10px;
+    border-radius: 10px;
+    border: 3px solid #000;
+
+}
+
+.title {
+    color: black;
+    font-size: 30px;
+    font-family: DM Sans;
+    font-weight: 500;
+    word-wrap:  break-word;
+}
+
+.date {
+    color: #202020;
+    font-size: 16px;
+    font-family: DM Mono;
+    font-weight: 400;
+    word-wrap: break-word;
 }
