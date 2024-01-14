@@ -2,7 +2,8 @@
 <html lang = "en">
     <head>
         <link rel="stylesheet" href="style_m.css"/>
-           
+        <link href='https://fonts.googleapis.com/css?family=DM Mono' rel='stylesheet'>
+
     </head>
 
     <body> 
@@ -19,42 +20,53 @@
                     <input type="date" id="deadline" name="deadline">
                 </div>
 
-                <div class="box5">
-                    Box 5
-                </div>
-    
-                <div class="box6">
-                    Box 6
-                </div>
-    
-                <div class="box7">
-                    Box 7
-                </div>
-    
-                <div class="box8">
-                    Box 8
-                </div>
-    
-                <div class="box9">
-                    Box 9
-                </div>
-    
-                <div class="box10">
-                    Box 10
-                </div>
+                <button type="add" class="btn" style="color: #000000" onclick="calculateDifference()">Add</button>
 
             </div>
 
-
-
-
-                <div class="box4">
-                    <button style="font-size:20px; background-color:#FFFFFF; color:#000000; border-radius: 25px;" id="add-button">Add</button>
-                </div>
-
-            
+            <p id="result" style="color: #D88C9A"></p>
 
         </div>
+
+        <script>
+            function calculateDaysDifference(dateString){
+                function parseDate(dateString){
+                    const parts = dateString.split('/');
+                    const month = parseInt(parts[0], 10);
+                    const day = parseInt(parts[1], 10);
+                    const today = new Date();
+                    const year = today.getFullYear();
+
+                    let dateObject;
+                    if(month <= 12) {
+                        dateObject = new Date(year, month-1, day);
+                    } else{
+                        dateObject = new Date(year, month-1, day);
+                    }
+
+                    return dateObject
+                }
+
+                const today = new Date();
+                const userDate = parseDate(dateString);
+                const timeDifference = userDate - today;
+                const daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+                return daysDifference;
+
+            }
+
+            function calculateDifference(){
+                const userInput = document.getElementById('deadline').value;
+
+                if(userInput){
+                    const differenceInDays = calculateDaysDifference(userInput);
+                    document.getElementById('result').innerHTML = `${differenceInDays} days`;
+                } else{
+                    document.getElementById('result').innerHTML = 'Please enter a valid date.';
+                }
+            }
+
+        </script>
 
 
     </body>
