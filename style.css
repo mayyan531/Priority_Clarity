@@ -85,7 +85,7 @@ body{
 
 .newbtn{
     position: fixed;
-    padding: 5px 35px;
+    padding: 4px 35px;
     background:#F9F2EB;
     cursor: pointer;
     font-size: 18px;
@@ -96,7 +96,11 @@ body{
     top: 115px;
     right:20px;
     
-}    
+}
+
+.newbtn:hover{
+    border: 5px solid #30323D ;
+}
 
 .popup{
     position: fixed;
@@ -298,6 +302,10 @@ body{
     bottom: -35px;
     right: -183px;
     box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.25); 
+}
+
+.addbtn:hover{
+    border: 4px solid #30323D ;
 }
 
 .open-popup{
