@@ -42,7 +42,8 @@ function addBox({todo: input, category: date}) {
     box.setAttribute('id', newBox);
 
     //add css property everytime a new box is made
-    //document.getElementById(newBox). [either colour(colour taken from function) or fit-content(% from due date difference)]
+    let percentage = 1/calculateDays();
+    //box.style.grid-template-columns = 
 
     //add task name
     let taskName = document.createElement("h2");
