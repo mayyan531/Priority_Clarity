@@ -6,29 +6,38 @@
             to do
         </title>
         <link rel="stylesheet" href="style.css">
-        <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=DM Mono' rel='stylesheet'>
     </head>
 
     <body>
         <div class="background">
-            <div class="topbar">
-                <h1>Daily Planner</h1>
-                <h1></h1>
-            </div>
-            <div class="subbar"></div>
-            <button type="newtask" class="btn" style = "color: #30323D" onclick="openpopup()">New</button>
-            <div class="popup" id="popup">
-                <p>create event</p>
+
+            <div class="grid">
+
+                <div class="topbar">
+                    <h1>To Do</h1>
+                </div>
+            
+                <div class="subbar">
+                    <h2>Saturday, January 13, 2024</h2>
+                </div>
+            
+                <button type="newtask" class="btn" style="color: #30323D" onclick="openpopup()">New</button>
+            
+                <div class="popup" id="popup">
+                    <p>create event</p>
+                </div>
             </div>
         </div>
 
         <script>
-            let popup = document.getElementById("popup")
+            let createnew = document.getElementById("popup")
 
             function openpopup(){
-                popup.classList.add("open-popup");
+                createnew.classList.add("open-popup");
             }
         </script>
+
 
     </body>
 </html>
