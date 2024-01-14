@@ -24,7 +24,7 @@
                     <h2>Saturday, January 13, 2024</h2>
                 </div>
             
-                <button type="newtask" class="btn" style="color: #30323D" onclick="openpopup()">New</button>
+                <button type="newtask" class="new" style="color: #30323D" onclick="openpopup()">New</button>
             
                 <div class="popup" id="popup">
 
@@ -36,13 +36,23 @@
                         <input type="text" id="Deadline" required="required" placeholder="Deadline (mm-dd)">
                     </div>
 
-                    <div id="colorPicker">
-                        <div class="colorBox" onclick="selectColor('#D88C9A')"></div>
-                        <div class="colorBox" onclick="selectColor('#F2D0A9')"></div>
-                        <div class="colorBox" onclick="selectColor('#99C1B9')"></div>
-                        <div class="colorBox" onclick="selectColor('#F1E3D3')"></div>
-                        <div class="colorBox" onclick="selectColor('#8E7DBE')"></div>
-                        <div class="colorBox" onclick="selectColor('#F3F3F3')"></div>
+                    <div id="colorPickerR1">
+                        <div class="colorBox1" onclick="selectColor('#D88C9A')"></div>
+                        <div class="colorBox1" onclick="selectColor('#F2D0A9')"></div>
+                        <div class="colorBox1" onclick="selectColor('#99C1B9')"></div>
+                        <p id="hex"></p>
+                    </div>
+    
+                    <div id="colorPickerR2">
+                        <div class="colorBox2" onclick="selectColor('#F1E3D3')"></div>
+                        <div class="colorBox2" onclick="selectColor('#8E7DBE')"></div>
+                        <div class="colorBox2" onclick="selectColor('#F3F3F3')"></div>
+                        <p id="hex"></p>
+                    </div>
+    
+                    <div>
+                        <button type="addTask" class="addbtn" style="color: #30323D" onclick="calculateDifference(); closepopup(); getTaskName()">Add</button>
+                        <p id="date"></p>
                     </div>
 
                 </div>
@@ -50,6 +60,7 @@
             </div>
 
         </div>
+        
 
         <script>
             let createnew = document.getElementById("popup")
@@ -57,6 +68,11 @@
             function openpopup(){
                 createnew.classList.add("open-popup");
             }
+
+            function closepopup(){
+                createnew.classList.remove("open-popup");
+            }
+
         </script>
 
 
