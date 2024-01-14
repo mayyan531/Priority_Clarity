@@ -9,6 +9,11 @@ load();
 addButton.addEventListener("click", add);
 
 function add() {
+    if (input === "") {
+        alert("Please enter a valid task");
+    } else if (dateInput === "") {
+        alert("Please enter in a valid date");
+    }
     //define object with task and deadline attributes
     let task = {
         todo: input.value,
