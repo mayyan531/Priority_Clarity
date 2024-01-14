@@ -62,6 +62,13 @@ function addBox({todo: input, category: date}) {
     box.style.backgroundColor = colorhex;
 
     save();
+
+    let boxWidth = 500-calculateDays()*50; 
+    let boxHeight = 150; 
+
+    box.style.width = boxWidth + 'px';
+    box.style.height = boxHeight + 'px';
+
 }
 
 //color picker

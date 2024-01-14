@@ -248,6 +248,10 @@ body{
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
+.colorBox1:hover{
+    border:5px solid #494949;
+}
+
 .colorBox2 {
     width: 80px;
     height: 80px;
@@ -256,6 +260,10 @@ body{
     border: 3px solid #494949;
     border-radius: 10px;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.colorBox2:hover{
+    border:5px solid #494949;
 }
 
 .colorBox1:nth-child(1) {
