@@ -27,7 +27,6 @@
                 </div>
             
                 <button type="newtask" class="newbtn" style="color: #30323D" onclick="openpopup()">New</button>
-                <button type="newtask" class="newbtn" style="color: #30323D" onclick="openpopup()">New</button>
             
                 <div class="popup" id="popup">
 
@@ -54,7 +53,7 @@
                     </div>
     
                     <div>
-                        <button type="addTask" class="addbtn" style="color: #30323D" id ="add-button" onclick="calculateDifference(); closePopup(); getTaskName()">Add</button>
+                        <button type="addTask" class="addbtn" style="color: #30323D" id ="add-button" onclick= "closepopup()">Add</button>
                         <p id="date"></p>
                     </div>
 
@@ -73,10 +72,14 @@
                 createnew.classList.add("open-popup");
             }
 
+            function closepopup(){
+                createnew.classList.remove("open-popup");
+            }
+
         </script>
 
         <script src="adding.js"></script>
 
-        <script src="adding.js"></script>
     </body>
+
 </html>
