@@ -1,2 +1,3 @@
 # to_do_list
-Deltahacks11
+Priority Clarity Deltahacks 10 submission
+Open main_page.html to view 
