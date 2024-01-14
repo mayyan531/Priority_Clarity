@@ -16,6 +16,8 @@
 
                 <div class="boxcontainer" id="box-container"></div>
 
+                <div class="boxcontainer" id="box-container"></div>
+
                 <div class="topbar">
                     <h1>To Do</h1>
                 </div>
@@ -36,23 +38,32 @@
                         <input type="text" id="Deadline" required="required" placeholder="Deadline (mm-dd)">
                     </div>
 
-                    <div id="colorPicker">
-                        <div class="colorBox" onclick="selectColor('#D88C9A')"></div>
-                        <div class="colorBox" onclick="selectColor('#F2D0A9')"></div>
-                        <div class="colorBox" onclick="selectColor('#99C1B9')"></div>
-                        <div class="colorBox" onclick="selectColor('#F1E3D3')"></div>
-                        <div class="colorBox" onclick="selectColor('#8E7DBE')"></div>
-                        <div class="colorBox" onclick="selectColor('#F3F3F3')"></div>
+                    <div id="colorPickerR1">
+                        <div class="colorBox1" onclick="selectColor('#D88C9A')"></div>
+                        <div class="colorBox1" onclick="selectColor('#F2D0A9')"></div>
+                        <div class="colorBox1" onclick="selectColor('#99C1B9')"></div>
+                        <p id="hex"></p>
                     </div>
-
-                    <button type="add" class="addbtn" style="color: #000000" id="add-button">Add</button>
+    
+                    <div id="colorPickerR2">
+                        <div class="colorBox2" onclick="selectColor('#F1E3D3')"></div>
+                        <div class="colorBox2" onclick="selectColor('#8E7DBE')"></div>
+                        <div class="colorBox2" onclick="selectColor('#F3F3F3')"></div>
+                        <p id="hex"></p>
+                    </div>
+    
+                    <div>
+                        <button type="addTask" class="addbtn" style="color: #30323D" id ="add-button" onclick= "closepopup()">Add</button>
+                        <p id="date"></p>
+                    </div>
 
                 </div>
 
+
             </div>
 
+
         </div>
-        
 
         <script>
             let createnew = document.getElementById("popup")
@@ -61,8 +72,14 @@
                 createnew.classList.add("open-popup");
             }
 
+            function closepopup(){
+                createnew.classList.remove("open-popup");
+            }
+
         </script>
 
         <script src="adding.js"></script>
+
     </body>
+
 </html>
