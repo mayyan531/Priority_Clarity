@@ -1,6 +1,7 @@
 let input = document.getElementById("taskName");
 let dateInput = document.getElementById("Deadline");
 const addButton = document.getElementById("add-button");
+let boxes = document.querySelectorAll("box");
 
 let taskList = [];
 load();
@@ -41,6 +42,7 @@ function addBox({todo: input, category: date}) {
     let box = document.createElement("div");
     boxContainer.appendChild(box);
     box.setAttribute('class', 'box');
+    box.setAttribute('id', 'box-' + taskList.length);
 
     //add task name
     let taskName = document.createElement("h2");
