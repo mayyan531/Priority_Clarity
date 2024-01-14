@@ -17,15 +17,15 @@ function add() {
         date: dateInput.value
     }
 
-    //reset input values
-    input.value = "";
-    dateInput.value = "";
-
     //add task info into existing task list
     taskList.push(task);
 
     //add boxes
     addBox(task);
+
+    //reset input values
+    input.value = "";
+    dateInput.value = "";
 
     //save
     save();
@@ -52,37 +52,31 @@ function addBox({todo: input, category: date}) {
 
     //add deadline
     let deadline = document.createElement("h3");
-    deadline.innerText = calculateDaysDifference(dateInput.value); //change to remaining days
+    deadline.innerText = calculateDays() + ' days remaining'; //change to remaining days
     box.appendChild(deadline);
     deadline.setAttribute('class', 'date');
 
     //set color
     console.log(colorhex);
     box.style.backgroundColor = colorhex;
+
+    save();
 }
 
 //color picker
 function selectColor(colour) {
-    console.log("this function has been processed");
     colorhex=colour;
 }
 
-function calculateDaysDifference(dateString) {
-    function parseDate(dateString) {
-        const parts = dateString.split('-');
-        const month = parseInt(parts[0], 10);
-        const day = parseInt(parts[1], 10);
-        const today = new Date();
-        const year = today.getFullYear();
-        const dateObject = new Date(year, month - 1, day);
-        return dateObject;
-    }
+function calculateDays() {
+    var dateString = dateInput.value;
+    console.log(dateString);
+    let dueDate = new Date(dateString);
+    let currentDate = new Date();
 
-    const today = new Date();
-    const userDate = parseDate(dateString);
-    const timeDifference = userDate - today;
-    const daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-    return daysDifference;
+    const diff = dueDate - currentDate;
+    const diffDays = Math.floor(diff / (1000 * 60 * 60 * 24));
+    return diffDays + 1;
 }
 
 function save() {
