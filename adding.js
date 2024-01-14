@@ -69,6 +69,14 @@ function addBox({todo: input, category: date}) {
     box.style.width = boxWidth + 'px';
     box.style.height = boxHeight + 'px';
 
+    taskName.style.fontSize = 30 + 'px';
+    let fontFamily = 'dm mono'; // Set the desired font family
+    taskName.style.fontFamily = fontFamily;
+    taskName.style.paddingLeft=20+'px';
+
+    deadline.style.paddingLeft = 20+'px';
+    deadline.style.paddingTop = 20+'px';
+
 }
 
 //color picker
